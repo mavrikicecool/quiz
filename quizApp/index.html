@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Quiz App</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+<body ng-app="quizApp">
+
+	<div class="container">
+		<!--nav bar satrt-->
+		<div class="nav">
+		  	<div class="nav-header">
+			    <div class="nav-title">
+			      <a href="#/home">QuizApp</a>
+			    </div>
+		  	</div>
+		  	<div class="nav-btn">
+			    <label for="nav-check">
+			      <span></span>
+			      <span></span>
+			      <span></span>
+			    </label>
+		  	</div>
+		  	<input type="checkbox" id="nav-check">
+		  	<div class="nav-links">
+			    <a href="#/home">Home</a>
+		  	</div>
+		</div>
+		<!--nav bar end-->
+	   <div ui-view></div>
+	</div>
+
+<script src="main.js"></script>
+<script src="services/services.js"></script>
+<script src="controllers/home.controller.js"></script>
+<script src="controllers/questions.controller.js"></script>
+<script src="controllers/results.controller.js"></script>
+
+</body>
+</html>

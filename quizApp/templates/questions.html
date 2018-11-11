@@ -1,0 +1,26 @@
+<div ng-controller="questionController" >
+	<div ng-if="!noData">
+		<header ng-style="{'background-image':'url({{quizItem.image.filePath}})'}">
+			<h3>Quiz(<span>{{quizItem.id}}</span>): {{quizItem.title}}</h3>
+		</header>
+		
+		<div class='qns-item' ng-repeat="item in questionsData track by $index">
+			<p class='qns-item-wrap'>
+				<span class='qns-number'>{{$index+1}}</span> <span class="question">{{item.question}}</span>
+				<p class="qns-item-options">
+					<span ng-repeat="option in item.answers">
+						<input id = "option{{$parent.$index}}-{{$index}}" type="radio" name="" ng-model="item.selected" value="{{$index+1}}"/>
+						 <label for='option{{$parent.$index}}-{{$index}}' >{{option}}</label>
+					</span>	 
+				</p>
+				
+			</p>
+
+		</div>
+		<button class='btn blue' ng-click="gotoResultsPage(identifier)"> Submit Answers</button>
+	</div>
+	<div ng-if="noData" class="no-data">
+		<span>Please go to Quiz Page by click on Home or below button</span>
+		<button class='btn blue' ng-click="gotoHome()"> << Quiz list</button>
+	</div>
+</div>

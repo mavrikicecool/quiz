@@ -1,0 +1,17 @@
+<div ng-controller="homeController">
+	
+	<div>
+		<div class='quiz-container' ng-repeat='quiz in quizData track by $index'>
+			<div class='quiz-warpper clearfix' ng-click="gotoQuestions(quiz)">
+				<div class='quiz-item'>
+					<img src="{{quiz.thumbnail.filePath}}" width="{{quiz.thumbnail.width}}" height="{{quiz.thumbnail.height}}" />
+				</div>
+				<div class='quiz-item quiz-item-details'>
+					<a href="javascript:void(0)">{{quiz.title}}</a><span class='total-qns'>Total Questions : {{quiz.numOfQuestions}}</span>
+					<p>{{quiz.description}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

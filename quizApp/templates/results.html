@@ -1,0 +1,29 @@
+<div ng-controller="resultController">
+	<header ng-if="!noData">
+			<h3><span>Score : </span> <span class="score">{{result}}/{{total}}</span></h3>
+	</header>
+	<div  class='qns-item' ng-repeat="item in questionsData track by $index">
+		<p class='qns-item-wrap'>
+				<span class='qns-number'>{{$index+1}}</span> <span class="question">{{item.question}}</span>
+				<p class="qns-item-options">
+					<span ng-repeat="option in item.answers">
+						<input id = "option{{$parent.$index}}-{{$index}}" type="radio" name="" ng-model="item.selected" value="{{$index+1}}"/>
+						 <label for='option{{$parent.$index}}-{{$index}}' >{{option}}</label>
+					</span>	
+					<span class='answer-status tick'  ng-show="item.selected && item.selected == item.correct"></span>
+					<span class='answer-status cross' ng-show="item.selected && item.selected != item.correct"></span> 
+				</p>
+				<p class="qns-item-options">
+					<span>Answer : </span> <span class='qns-result' ng-init='val = (item.correct - 1)'>{{item.answers[val]}}</span>
+				</p>
+				<p class="qns-item-options">
+						<span>Explanation : </span> <span class='qns-result'>{{item.explanation}}</span>
+				</p>
+				
+		</p>
+	</div>
+	<div ng-if="noData" class="no-data">
+		<span>{{noData}}</span>
+		<button class='btn blue' ng-click="gotoHome()"> << Quiz list</button>
+	</div>
+</div>

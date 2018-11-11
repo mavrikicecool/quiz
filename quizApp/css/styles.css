@@ -1,0 +1,348 @@
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+	text-decoration: none;
+}
+/*nav bar css start*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #333333;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+.nav > .nav-header > .nav-title  a{
+	color: #fff;
+}
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 15px 18px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover,.nav > .nav-links a.active {
+  background-color: #111111;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > .nav-links a.active{
+  	background-color: #111111;
+  }
+  .nav > #nav-check:not(:checked) + .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked + .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+/*nav bar css ends here*/
+
+.quiz-container{
+	margin: 10px;
+}
+.quiz-warpper{
+	border: 1px solid #d3d6d9;
+	background: #fff;
+	cursor: pointer;
+	height: 120px;
+}
+.quiz-warpper:hover{
+	 box-shadow: 5px 11px 25px 1px rgba(0,0,0,0.55);
+}
+.quiz-warpper .quiz-item{
+	float: left;
+}
+.quiz-warpper .quiz-item.quiz-item-details
+{
+	position: relative;
+	padding: 10px;
+}
+.total-qns{
+	position: absolute;
+	right: 0;
+	color: #ccc;
+}
+.quiz-warpper .quiz-item.quiz-item-details a{
+	font-size: 2rem;
+	color: #9c9b2a;
+	font-weight: bold;
+}
+.quiz-warpper .quiz-item.quiz-item-details p{
+	width: 50%;
+	color: #5f7e9e;
+	padding-left: 15px;
+	font-style: oblique;
+}
+header{
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100px;
+	color: #8fef19;
+}
+header h3 {
+	text-align: center;
+	font-size: 3rem;
+	padding-top: 1.5rem;
+}
+.qns-item{
+	border-bottom: 1px solid #d3d6d9;
+	padding: 10px;
+	margin: 0 15px;
+}
+.qns-item .qns-item-wrap .qns-number{
+	display: inline-block;
+	background: #ccc;
+	height: 50px;
+	width: 50px;
+	border-radius: 50px;
+	text-align: center;
+	padding-top: 18px;
+	box-sizing: border-box;
+	color: #554dd1;
+}
+.qns-item .qns-item-wrap .question{
+	font-size: 16px;
+	color: #656181;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.qns-item .qns-item-options{
+	padding-left: 50px;
+	font-size: 16px;
+	color: #656181;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-bottom: 5px;
+}
+.qns-item .qns-item-options label{
+	margin-right: 30px;
+}
+.qns-item .qns-item-options .qns-result{
+	color:#0f0;
+}
+/*custom radio css starts*/
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #F87DA9;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+/*custom radio box css ends*/
+.answer-status{
+	position: relative;
+}
+.answer-status.tick:before {
+  content: "\2713";
+  color: darkgreen;
+   font-size: 1.5rem;
+  position: absolute;
+ 
+}
+.answer-status.cross:before {
+  content: "\2717";
+  color: crimson;
+  position: absolute;
+  font-size: 1.5rem;
+}
+.btn {
+    background-color:#008CBA; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin: 15px;
+}
+.btn.blue{
+	 background-color: #008CBA;
+}
+.no-data{
+	margin: 0 auto;
+	width: 80%;
+	text-align: center;
+	padding-top: 10px;
+}
+.no-data span{
+	display: block;
+	color: #b09292;
+	font-size: 1.5rem;
+}
+.score {
+	display: inline-block;
+	border: 1px solid #372ce9;
+	font-size: 3.5rem;
+	border-radius: 50px;
+	height: 90px;
+	width: 90px;
+	padding-top: 18px;
+	color: #000;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
